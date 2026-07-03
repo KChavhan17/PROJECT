@@ -1,4 +1,8 @@
 #Employee Bonus Eligibility
+
+print("\n                Employee Bonus Eligibility Report              ")
+print("-"*70)
+
 years_of_experience=int(input("Enter Years of Experience: "))
 performance_rating=float(input("Enter Performance Rating(1-10) : "))
 
