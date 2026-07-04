@@ -10,7 +10,5 @@ if budget_amount<=allocated_budget and department_performance>=7:
     "performance is good.")
 
 else:
-
-    
     print("Your allocated budget exceeds the total budget amount"
     " and your department performance needs improvement.")
