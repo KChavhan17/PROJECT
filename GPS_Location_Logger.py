@@ -1,7 +1,7 @@
 #GPS Location Logger
 
 print("-"*80)
-print("               GPS Location Logger             ")
+print("                           GPS Location Logger             ")
 print("-"*80)
 print("\n")
 
@@ -22,4 +22,4 @@ try:
     print("\nAttempting to modify Stop 1's latitude...")
     delivery_route[0][0] = 14.0000  # This will fail because tuples are immutable
 except TypeError as error:
-    print(f"Error caught successfully: {error}")
+    print(f"\nError caught successfully: {error}")
