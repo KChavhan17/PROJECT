@@ -21,7 +21,7 @@ wallet = 100000
 def show_tech_inventory():
     print(f"\n--- TECH STORE CATALOG ---")
     
-    for i, item in enumerate(tech_products[:6]):
+    for i, item in enumerate(len(tech_products)):
         print(f"[{i}] {item[0]} - ₹{item[1]} (Stock: {item[2]})")
 
 def add_to_cart():
@@ -56,3 +56,4 @@ while True:
     if choice == '1': show_tech_inventory()
     elif choice == '2': add_to_cart()
     elif choice == '3': break
+    else : print("--Invalid Choice--")
