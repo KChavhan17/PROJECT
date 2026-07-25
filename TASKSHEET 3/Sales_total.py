@@ -6,7 +6,7 @@ days=len(sales)
 print("---Sales Total Calculator---")
 for sale in sales:
     total+=sale
-    print(f"Day{i}:{sale}")
+    print(f"Day{ i } : {sale}")
     i+=1
 average=total/days
 print("Total sales:",total)

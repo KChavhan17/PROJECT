@@ -18,3 +18,4 @@ match2, miss2 = match_skills(required_skills, candidate2)
 print("Candidate 2")
 print("Matched Skills:", match2)
 print("Missing Skills:", miss2)
+
