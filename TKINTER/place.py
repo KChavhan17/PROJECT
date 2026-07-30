@@ -1,0 +1,13 @@
+from tkinter import *
+parent=Tk()
+parent.title("Students")
+parent.geometry("300x200")
+name=Label(parent,text="Name:")
+name.place(x=50,y=50)
+e1=Entry(parent)
+e1.place(x=100,y=50)
+regno=Label(parent,text="Regd No:")
+regno.place(x=50,y=100)
+e2=Entry(parent)
+e2.place(x=110,y=100) 
+parent.mainloop()
