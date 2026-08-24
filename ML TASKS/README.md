@@ -26,3 +26,7 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+
+
+┌── 🏛️ Digital Dreams Institute | ML Internship Module ──┐
+└── 🚀 Engineered with precision by KChavhan17 ─────────┘
