@@ -18,9 +18,9 @@ A lightweight, standalone desktop GUI application that predicts employee salary 
 No Python installation or environment setup required.
 
 1. Go to the repository Releases page.
-2. Download `mmm.zip` under the **Assets** section.
+2. Download `main.zip` under the **Assets** section.
 3. Extract the downloaded ZIP folder.
-4. Double-click `mmm.exe` to run the application.
+4. Double-click `main.exe` to run the application.
 
 > **Note:** If Windows SmartScreen appears, click **More info** -> **Run anyway**.
 
