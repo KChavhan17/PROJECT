@@ -1,10 +1,10 @@
+import bz2
 import os
 import pickle
 import pandas as pd
 import requests
 import streamlit as st
 
-# Locate project directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def fetch_poster(movie_id):
@@ -18,7 +18,6 @@ def fetch_poster(movie_id):
                 return "https://image.tmdb.org/t5/p/w500/" + poster_path
     except Exception:
         pass
-    # Fallback image if poster fails or API times out
     return "https://via.placeholder.com/500x750?text=No+Poster"
 
 def recommend(movie):
@@ -42,18 +41,14 @@ def recommend(movie):
 # UI Setup
 st.header('Movie Recommender System')
 
-# Load files safely
 movie_dict_path = os.path.join(BASE_DIR, 'movie_dict.pkl')
-if not os.path.exists(movie_dict_path):
-    movie_dict_path = os.path.join(BASE_DIR, 'model', 'movie_list.pkl')
-
-similarity_path = os.path.join(BASE_DIR, 'similarity.pkl')
-if not os.path.exists(similarity_path):
-    similarity_path = os.path.join(BASE_DIR, 'model', 'similarity.pkl')
+similarity_path = os.path.join(BASE_DIR, 'similarity_compressed.pkl')
 
 movies_dict = pickle.load(open(movie_dict_path, 'rb'))
 movies = pd.DataFrame(movies_dict) if isinstance(movies_dict, dict) else movies_dict
-similarity = pickle.load(open(similarity_path, 'rb'))
+
+with bz2.BZ2File(similarity_path, 'rb') as f:
+    similarity = pickle.load(f)
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
